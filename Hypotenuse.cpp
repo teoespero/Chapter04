@@ -1,4 +1,4 @@
-//	Hypotenuse.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//  Hypotenuse.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //  Teodulfo Espero
 //  BS Cloud and Systems Administration
 //  BS Software Development
@@ -12,7 +12,7 @@
 using namespace std;
 
 double getHypotenuse(double sidea, double sideb) {
-	return sqrt(((sidea * sidea) + (sideb * sideb)));
+	return sqrt(pow(sidea,2.0) + pow(sideb,2.0));
 }
 
 void displyHed() {
@@ -51,6 +51,7 @@ void getInputs() {
 }
 
 int main() {
+	
 	
 	displyHed();
 	getInputs();
