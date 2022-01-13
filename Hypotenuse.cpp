@@ -50,10 +50,32 @@ void getInputs() {
 	processInputs(sidea, sideb);
 }
 
+void keeprunning(char &response) {
+	cout << "Run it again.....";
+	cin >> response;
+}
+
+bool stopit(char answer) {
+	if (tolower(answer) == 'y')
+		return true;
+	else if (tolower(answer) == 'n')
+		return false;
+	else {
+		cout << "\t***Invalid response..." << endl;
+		return false;
+	}
+}
+
 int main() {
 	
+	char
+		doitagain = 'y';
+
+	do {
+		displyHed();
+		getInputs();
+		keeprunning(doitagain);
+	} while (stopit(doitagain));
 	
-	displyHed();
-	getInputs();
 }
 
